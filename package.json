@@ -1,0 +1,25 @@
+{
+  "name": "dish_router",
+  "version": "1.0.0",
+  "description": "the dish routeru",
+  "main": "dishRouter.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "body-parser": "^1.15.2",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangshuwei/node_js.git"
+  },
+  "author": "shuwei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhangshuwei/node_js/issues"
+  },
+  "homepage": "https://github.com/zhangshuwei/node_js#readme"
+}
