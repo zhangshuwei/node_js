@@ -4,8 +4,10 @@
   "description": "the dish routeru",
   "main": "dishRouter.js",
   "dependencies": {
-    "express": "^4.14.0",
+    "assert": "^1.4.1",
     "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.15",
     "morgan": "^1.7.0"
   },
   "devDependencies": {},
