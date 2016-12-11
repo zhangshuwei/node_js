@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var dishRouter = require('./routes/dishRouter');
+var promoRouter = require('./routes/promoRouter');
+var leaderRouter = require('./routes/leaderRouter');
 
 var app = express();
 
@@ -24,6 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/dishes',dishRouter);
+app.use('/promotions',promoRouter);
+app.use('/leadership',leaderRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -32,6 +38,18 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+// error handlers
+// development error handler
+// will print stacktrace
+if (app.get('env') === 'development') {
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
+    });
+  });
+}
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -40,7 +58,10 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
 });
-
 module.exports = app;
+
