@@ -33,7 +33,7 @@ function auth(req,res,next) {
 
 app.use(auth);
 app.use(express.static(__dirname + '/public'));
-app.use(function(req,res,next){
+app.use(function(err,req,res,next){
 	res.writeHeader(err.status || 500 ,
 		{'WWW-Authenticate':'Basic',
 		 'Content-Type':'text/plein'
