@@ -9,7 +9,7 @@ var app = express();
 
 app.use(morgan('dev'));
 
-app.use(cookieParser('12345-67890-09876-54321')); // secret key
+app.use(cookieParser('12345-67890-09876-54320')); // secret key
 
 function auth (req, res, next) {
 	console.log(req.headers);
