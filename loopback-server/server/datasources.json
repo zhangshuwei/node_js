@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "MongoDB": {
+    "host": "127.0.0.0",
+    "port": 27017,
+    "url": "mongodb://127.0.0.1:27017",
+    "database": "conFusion",
+    "password": "",
+    "name": "MongoDB",
+    "user": "",
+    "connector": "mongodb"
   }
 }
